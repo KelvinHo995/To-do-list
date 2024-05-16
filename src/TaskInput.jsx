@@ -1,8 +1,8 @@
 
-const TaskInput = ({ onChange, onEnter }) => {
+const TaskInput = ({ task, onChange, onEnter }) => {
 
     return (
-        <input onChange={onChange} onKeyDown={(event) => {
+        <input value={task} onChange={onChange} onKeyDown={(event) => {
             if(event.key === "Enter")
                 onEnter()
         }}/>

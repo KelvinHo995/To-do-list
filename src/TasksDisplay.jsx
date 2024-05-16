@@ -1,7 +1,9 @@
 
-const TasksDisplay = ({ tasks }) => {
+const TasksDisplay = ({ tasks, onBoxChecked}) => {
     return (
-        tasks.map(task => <li>{task}</li>)
+        <div>
+            {tasks.map(task => <div><text>{task}</text> <button name={task} onClick={onBoxChecked}>Finished</button></div>)}
+        </div>
     )
 }
 
